@@ -10,5 +10,7 @@ class Event
     end
 
     def postpone_24h
-        @start_date + 24*60*60 
+        require 'time'
+        @start_date + 24*60*60
+    end
 end
