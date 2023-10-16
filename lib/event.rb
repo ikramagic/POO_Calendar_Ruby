@@ -13,4 +13,9 @@ class Event
         require 'time'
         @start_date + 24*60*60
     end
+
+    def end_date
+        require 'time'
+        @start_date + @duration * 60
+    end
 end
