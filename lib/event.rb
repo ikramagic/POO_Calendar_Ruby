@@ -8,4 +8,7 @@ class Event
         @title = given_name
         @attendees = [peeps]
     end
+
+    def postpone_24h
+        @start_date + 24*60*60 
 end
