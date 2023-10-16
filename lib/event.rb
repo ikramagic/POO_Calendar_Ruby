@@ -16,4 +16,10 @@ class Event
     def end_date
         @start_date + @duration * 60
     end
+
+    def is_past?
+        require 'time'
+        current_time = Time.now #Time.new c'est la même chose
+        @start_date < current_time
+    end
 end
