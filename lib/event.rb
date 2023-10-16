@@ -22,4 +22,10 @@ class Event
         current_time = Time.now #Time.new c'est la même chose
         @start_date < current_time
     end
+
+    def is_future? #executer !my_event.is_past? donnera le meme résultat, car ! vérifie la condition inverse
+        require 'time'
+        current_time = Time.now
+        @start_date > current_time
+    end
 end
