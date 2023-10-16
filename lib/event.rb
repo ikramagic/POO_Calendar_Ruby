@@ -29,19 +29,14 @@ class Event
         @start_date > current_time
     end
 
-    #def is_soon?
-        #require 'time'
-        #@start_date <= Time.now - 30*60
-    #end
-
     def to_s
         puts "Titre : " + @title
         puts "Date de début : " + @start_date.to_s
         puts "Durée : " + @duration.to_s + " minutes"
-        puts "Invités : " + @attendees.join(", ") #va prendre les éléments à l'intérieur de l'array et les relier avec ce qui est spécifié dans ("")
+        puts "Invités : " + @attendees.join(", ") 
+        #va prendre les éléments à l'intérieur de l'array et les relier avec ce qui est spécifié dans ("")
     end
 end
-
 
 
         #@attendees.each do |key, value| #ne fonctionne pas car pas un hash, mais une array
